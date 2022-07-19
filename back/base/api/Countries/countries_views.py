@@ -52,37 +52,3 @@ def PutCountries(request,id):
     temp.save()
     return Response({'PUT': id})
 
-
-# @api_view(['GET'])
-# @permission_classes([IsAuthenticated])
-# def getCars(request):
-#     print("innnn")
-#     user = request.user
-#     print(user)
-#     cars = user.car_set.all()
-#     print(cars)
-#     serializer = CarSerializer(cars, many=True)
-#     return Response(serializer.data)
- 
-# @api_view(['POST'])
-# @permission_classes([IsAuthenticated])
-# def addNote(request):
-#     user = request.user
-#     Note.objects.create(body=request.data['newnote'],user=user)
-#     print(user)
-#     notes = user.note_set.all()
-#     print(notes)
-#     serializer = NoteSerializer(notes, many=True)
-#     return Response(serializer.data)
-
-
-
-
-# @api_view(['POST'])
-# @permission_classes([IsAuthenticated])
-# def addCar(request):
-#     print(request.data)
-#     user = request.user
-#     Car.objects.create(color=request.data["color"],model=request.data["model"],user=user)
-#     print(user)
-#     return Response({'car':'added'})

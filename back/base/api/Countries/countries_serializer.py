@@ -21,6 +21,7 @@ class CountriesSerializer(serializers.ModelSerializer):
 
     def GetCountryById(self,id):
         country= Countries.objects.get(id = id)
+        print(country.flag)
         return {
             "id": country.id,
             "name": country.name,
